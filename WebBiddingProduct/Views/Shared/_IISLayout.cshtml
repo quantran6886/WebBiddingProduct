@@ -1,0 +1,266 @@
+﻿
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>@ViewData["Title"]</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="~/libclient/css/animate.css">
+	<link rel="stylesheet" href="~/libclient/css/bootstrap.css">
+	<link rel="stylesheet" href="~/libclient/css/font-awesome.min.css">
+	<link rel="stylesheet" href="~/libclient/css/owl.carousel.css">
+	<link rel="stylesheet" href="~/libclient/css/owl.theme.css">
+	<link rel="stylesheet" href="~/libclient/css/prettyPhoto.css">
+	<link rel="stylesheet" href="~/libclient/css/smoothness/jquery-ui-1.10.4.custom.min.css">
+	<link rel="stylesheet" href="~/libclient/rs-plugin/css/settings.css">
+	<link rel="stylesheet" href="~/libclient/css/theme.css">
+	<link rel="stylesheet" href="~/libclient/css/colors/turquoise.css">
+	<link rel="stylesheet" href="~/libclient/css/responsive.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700">
+</head>
+<body>
+	<!-- Top header -->
+	<div id="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="th-text pull-left">
+						<div class="th-item"> <a href="#"><i class="fa fa-phone"></i> 05-460789986</a> </div>
+						<div class="th-item"> <a href="#"><i class="fa fa-envelope"></i> MAIL@STARHOTEL.COM </a></div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="th-text pull-right">
+						<div class="th-item">
+							<div class="btn-group">
+								<button class="btn btn-default btn-xs dropdown-toggle js-activated" type="button" data-toggle="dropdown"> English <span class="caret"></span> </button>
+								<ul class="dropdown-menu">
+									<li> <a href="#">ENGLISH</a> </li>
+									<li> <a href="#">FRANCE</a> </li>
+									<li> <a href="#">GERMAN</a> </li>
+									<li> <a href="#">SPANISH</a> </li>
+								</ul>
+							</div>
+						</div>
+						<div class="th-item">
+							<div class="social-icons"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-youtube-play"></i></a> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Header -->
+	<header>
+		<!-- Navigation -->
+		<div class="navbar yamm navbar-default" id="sticky">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid" class="navbar-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+					<a href="index.html" class="navbar-brand">
+						<div id="logo">
+							<img id="default-logo" src="~/libclient/images/logo-dau-gia-lac-viet.png" alt="Starhotel" style="height:44px;"> <img id="retina-logo" src="images/logo-retina.png" alt="Starhotel" style="height:44px;">
+						</div>
+					</a>
+				</div>
+				<div id="navbar-collapse-grid" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown active">
+							<a href="/Home/Index">Trang chủ</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Tài sản đấu giá<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="/ListViewProducts/ListViewProducts">Tài sản nhà nước</a></li>
+								<li><a href="room-detail.html">Bất động sản</a></li>
+								<li><a href="room-detail.html">Phương tiện - Xe cộ</a></li>
+								<li><a href="room-detail.html">Sưu tầm - Nghệ thuật</a></li>
+								<li><a href="room-detail.html">Tài sản khác</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Phiên đấu giá<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="room-list.html">Phiên đấu giá sắp đấu giá</a></li>
+								<li><a href="room-detail.html">Phiên đấu giá đang diễn ra</a></li>
+								<li><a href="room-detail.html">Phiên đấu giá đã kết thúc</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle js-activated">Tin tức<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="blog.html">Thông báo</a></li>
+								<li><a href="blog-post.html">Thông báo đấu giá</a></li>
+								<li><a href="blog-post.html">Tin khác</a></li>
+							</ul>
+						</li>
+						<li> <a href="/Introduction/Introduction">Giới thiệu</a></li>
+						<li> <a href="/Contact/Contact">Liên hệ</a></li>
+						<li> <a href="#" onclick="fcLogin()"><b class="fa fa-user"></b> Đăng nhập</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container-body">
+		@RenderBody();
+	</div>
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-3">
+					<h4>Công ty đấu giá hợp danh Lạc Việt</h4>
+					<p>
+						Mã số thuế: 0108055420.
+						<br>
+						Đại diện: bà Đỗ Thị Hồng Hạnh - Chức vụ: Tổng giám đốc.
+					</p>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<h4>Recieve our newsletter</h4>
+					<p>Suspendisse sed sollicitudin nisl, at dignissim libero. Sed porta tincidunt ipsum, vel volutpa!</p>
+					<form role="form">
+						<div class="form-group">
+							<input name="newsletter" type="text" id="newsletter" value="" class="form-control" placeholder="Please enter your E-mailaddress">
+						</div>
+						<button type="submit" class="btn btn-lg btn-black btn-block">Submit</button>
+					</form>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<h4>From our blog</h4>
+					<ul>
+						<li>
+							<a href="#">
+								Amazing post with all the goodies<br>
+								January 23, 2014
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Integer dignissim nisl eu lacus<br>
+								January 21, 2014
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Aliquam erat volutpat. Nulla semper<br>
+								January 14, 2014
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-sm-3">
+					<h4>Address</h4>
+					<address>
+						<strong>Twitter, Inc.</strong><br>
+						795 Folsom Ave, Suite 600<br>
+						San Francisco, CA 94107<br>
+						<abbr title="Phone">P:</abbr> <a href="#">(123) 456-7890</a><br>
+						<abbr title="Email">E:</abbr> <a href="#">mail@example.com</a><br>
+						<abbr title="Website">W:</abbr> <a href="#">www.slashdown.nl</a><br>
+					</address>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6"> &copy; 2014 Starhotel All Rights Reserved </div>
+					<div class="col-xs-6 text-right">
+						<ul>
+							<li><a href="contact-01.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div id="loginModal" class="modal fade" tabindex="-1" aria-modal="true" role="dialog" style="display: none; padding-left: 0px;">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="form-wrapper">
+						<div class="modal-header-custom">
+							<ul id="navTabs" class="nav nav-tabs" style="border-bottom: unset;">
+								<li id="closeLoginModalContainer" class="float-end" style="float:inline-end">
+									<a data-toggle="modal" data-dismiss="modal" id="closeLoginModal" onclick="closeModalLogin()" style="color: red;font-size:20px;padding:0px">
+										<i class="fa fa-close"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="form-title" style="justify-items: center;">
+							<div style=" " class="loginLogoContainer">
+								<img src="~/libclient/images/logo-dau-gia-lac-viet.png" style="" width="300" class="loginLogo img-fluid">
+							</div>
+							<p>Bạn chưa có tài khoản? <a href="/dang-ky">Đăng ký ngay</a></p>
+						</div>
+						<form onsubmit="return Login(event);" class="w-100">
+							<div class="row" style="padding:20px">
+								<div class="col-12">
+									<div class="form-inner">
+										<label>Tên đăng nhập / Email</label>
+										<input id="user_login" class="form-control" type="text" placeholder="Nhập tên đăng nhập/Email">
+									</div>
+								</div>
+								<div class="col-12" style="margin-top:10px">
+									<div class="form-inner">
+										<label>Mật khẩu</label>
+										<input type="password" class="form-control" name="password" id="user_pass" placeholder="Mật khẩu">
+										<i class="bi bi-eye-slash" id="togglePassword"></i>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-agreement form-inner d-flex justify-content-between flex-wrap">
+										<a href="/quen-mat-khau" class="forgot-pass">Quên mật khẩu?</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<button class="account-btn btn btn-danger w-100" style="width:100%" type="submit">Đăng nhập</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Go-top Button -->
+	<div id="go-top"><i class="fa fa-angle-up fa-2x"></i></div>
+	<!-- Javascripts -->
+	<script type="text/javascript" src="~/libclient/js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="~/libclient/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="~/libclient/js/bootstrap-hover-dropdown.min.js"></script>
+	<script type="text/javascript" src="~/libclient/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="~/libclient/js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="~/libclient/js/jquery.nicescroll.js"></script>
+	<script type="text/javascript" src="~/libclient/js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="~/libclient/js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src="~/libclient/js/jquery.forms.js"></script>
+	<script type="text/javascript" src="~/libclient/js/jquery.sticky.js"></script>
+	<script type="text/javascript" src="~/libclient/js/waypoints.min.js"></script>
+	<script type="text/javascript" src="~/libclient/js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="~/libclient/js/jquery.gmap.min.js"></script>
+	<script type="text/javascript" src="~/libclient/http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="~/libclient/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="~/libclient/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+	<script type="text/javascript" src="~/libclient/js/custom.js"></script>
+	<script>
+		function fcLogin(){
+			$("#loginModal").css("z-index","99999")
+			$("#loginModal").modal("show");
+		}
+
+	</script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

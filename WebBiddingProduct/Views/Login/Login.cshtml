@@ -1,0 +1,46 @@
+﻿<div id="loginModal" class="modal fade" tabindex="-1" aria-modal="true" role="dialog" style="display: none; padding-left: 0px;">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="form-wrapper">
+					<div class="modal-header-custom">
+						<ul id="navTabs" class="nav nav-tabs" style="border-bottom: unset;">
+							<li id="closeLoginModalContainer" class="float-end" style="float:inline-end">
+								<a data-toggle="modal" data-dismiss="modal" id="closeLoginModal" onclick="closeModalLogin()" style="color: red;font-size:20px;padding:0px">
+									<i class="fa fa-close"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="form-title" style="justify-items: center;">
+						<div style=" " class="loginLogoContainer">
+							<img src="~/libclient/images/logo-dau-gia-lac-viet.png" style="" width="300" class="loginLogo img-fluid">
+						</div>
+						<p>Bạn chưa có tài khoản? <a href="/dang-ky">Đăng ký ngay</a></p>
+					</div>
+					<form onsubmit="return Login(event);" class="w-100">
+						@Html.AntiForgeryToken()
+						<div class="row" style="padding:20px">
+							<div class="col-12">
+								<div class="form-inner">
+									<label>Tên đăng nhập / Email</label>
+									<input id="user_login" class="form-control" type="text" placeholder="Nhập tên đăng nhập/Email">
+								</div>
+							</div>
+							<div class="col-12" style="margin-top:10px">
+								<div class="form-inner">
+									<label>Mật khẩu</label>
+									<input type="password" class="form-control" name="password" id="user_pass" placeholder="Mật khẩu">
+								</div>
+							</div>
+							<div class="col-12">
+								<button class="account-btn btn btn-danger w-100" style="width:100%" type="submit">Đăng nhập</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

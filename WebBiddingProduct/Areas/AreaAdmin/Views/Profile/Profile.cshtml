@@ -1,0 +1,157 @@
+﻿@{
+	ViewData["Title"] = "DashBoard";
+	ViewData["LinkWebSite"] = "Thông tin cá nhân";
+	Layout = "~/Areas/AreaAdmin/Views/Shared/_IISLayoutAdmin.cshtml";
+}
+<link href="~/plugin/signature/css/jquery.signature2.css" rel="stylesheet" />
+<style>
+	.kbw-signature canvas {
+		margin: 0;
+	}
+
+	.disabled-div {
+		pointer-events: none;
+		opacity: 0.5;
+		background-color: #f2f2f2;
+		color: #999;
+		cursor: not-allowed;
+	}
+
+	.bootstrap-filestyle {
+		margin: 0px
+	}
+
+	#layoutDauDo {
+		margin-top: 30px;
+		margin-left: 30px;
+	}
+
+</style>
+@section Scripts {
+	<script src="https://www.jqueryscript.net/demo/Smooth-Signature-Pad-Plugin-with-jQuery-Html5-Canvas/assets/numeric-1.2.6.min.js"></script>
+	<script src="~/plugin/signature/js/jquery.signature2.js"></script>
+	<script src="~/plugin/signature/js/jquery.signaturepad.js"></script>
+	<script type="text/javascript">
+		var files;
+		var urlAttach;
+		var sig = $('#smoothed').signaturePad({ drawOnly: true, drawBezierCurves: true, lineTop: 200 });
+
+	</script>
+}
+
+<div class="card shadow-sm border-0 mb-4">
+	<div class="card-header p-0 overflow-hidden">
+		<div class="row no-gutters align-items-center position-relative gradient-pink">
+			<figure class="background opac">
+				<img src="../assets/img/background-part.png" alt="" class="">
+			</figure>
+			<div class="container pl-2">
+				<div class="row align-items-center ">
+					<div class="col-12 col-sm-auto text-center">
+						<a href="profile.html">
+							<figure class="avatar avatar-150 rounded-circle mx-auto my-3">
+								<img src="~/libadmin/assets/img/user1.png" alt="">
+							</figure>
+						</a>
+					</div>
+					<div class="col-12 col-sm text-center text-sm-left text-white">
+						<h3 class="mb-0">Trần Minh Quân</h3>
+						<p class="">Loại tài khoản : Admin</p>
+						<p><i class="material-icons vm mr-2 fs15">mail_outline</i> admin@exeampale.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card-body">
+		<div class="row justify-content-center">
+			<div class="col-md-12 col-lg-12">
+				<div class="page-subtitle">Thông tin cá nhân</div>
+				<div class="form-group row">
+					<div class="col-lg-6 col-md-6">
+						<label>Họ và tên</label>
+						<input type="text" class="form-control" placeholder="">
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<label>Địa chỉ</label>
+						<input type="text" class="form-control" placeholder="">
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-lg-6 col-md-6">
+						<label>Email</label>
+						<input type="email" class="form-control" placeholder="">
+					</div>
+					<div class="col-lg-6 col-md-6">
+						<label>Số điện thoại</label>
+						<input type="text" class="form-control" placeholder="">
+					</div>
+				</div>
+				<div class="page-subtitle">Chữ ký điện tử</div>
+				<div class="form-group row col-12 m-0 p-0">
+					<div class="col-6 p-0">
+						<div class="custom-file text-left">
+							<input type="file" class="custom-file-input" id="customFile">
+							<label class="custom-file-label" for="customFile">Chọn con dấu</label>
+						</div>
+					</div>
+					<div class="col-3">
+						<button type="button" class=" ml-2 btn btn-outline-primary w-100"> Tải lên</button>
+					</div>
+					<div class="col-3">
+						<button type="button" class=" ml-2 btn btn-outline-danger w-100"> Tách nền</button>
+					</div>
+				</div>
+				<div class="container">
+					<div class="form-group row">
+						<!-- Cột ký chữ ký -->
+						<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+							<div class="sigPad" id="smoothed" style="width: 100%;">
+								<ul class="sigNav">
+									<li class="clearButton"><a href="#clear">Ký lại</a></li>
+								</ul>
+								<div class="sig sigWrapper" id="sig" style="width: 100%; height: auto;">
+									<div class="typed"></div>
+									<canvas class="pad m-0" style="width: 100%; height: auto;"></canvas>
+									<input type="hidden" name="output-3" class="output">
+								</div>
+							</div>
+						</div>
+
+						<!-- Cột layoutDauDo -->
+						<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+							<div class="m-30" id="layoutDauDo">
+								<div class="form-group shadow-sm">
+									<img id="canvasDD" style="width: 100%; height: auto;" alt="Image">
+								</div>
+							</div>
+						</div>
+
+						<!-- Cột detailCK -->
+						<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+							<div class="m-30" id="layoutDauDo">
+								<div class="form-group shadow-sm">
+									<img id="detailCK" style="width: 100%; height: auto;" alt="Image">
+								</div>
+							</div>
+						</div>
+
+						<!-- Cột detailDD -->
+						<div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+							<div class="m-30" id="layoutDauDo">
+								<div class="form-group shadow-sm">
+									<img id="detailDD" style="width: 100%; height: auto;" alt="Image">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="card-footer">
+		<button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Làm mới</button>
+		<button type="button" class="btn btn-primary float-right">Cập nhập</button>
+	</div>
+</div>

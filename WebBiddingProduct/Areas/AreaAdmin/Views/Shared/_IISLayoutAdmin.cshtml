@@ -1,0 +1,439 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Website quản trị hệ thống,phần mềm đấu giá trực tuyến." name="description" />
+    <meta content="" name="author" />
+    <link rel="shortcut icon" href="~/libadmin/assets/img/logoicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="~/libadmin/assets/vendor/material-icons/material-icons.css" rel="stylesheet">
+    <link href="~/libadmin/assets/vendor/flags/css/flag-icon.min.css" rel="stylesheet">
+    <link href="~/libadmin/assets/vendor/daterangepicker-master/daterangepicker.css" rel="stylesheet">
+    <link href="~/libadmin/assets/css/style-darkblue-dark.css" rel="stylesheet" id="stylelink">
+</head>
+<body class="sidemenu-open">
+    <div class="loader container-fluid">
+        <div class="row h-100">
+            <div class="col-auto align-self-center  mx-auto text-center">
+                <div class="loader-ripple"><div></div><div></div></div>
+                <h2>AdminuxPRO</h2>
+                <p>HTML Template</p>
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar starts -->
+    <div class="sidebar">
+        <!-- Logo sidebar -->
+        <a href="" class="logo">
+            <div class="logo-text">
+                <h5 class="fs22 mb-0">QSoft <sup class="badge badge-danger">Tài khoản: Quản trị</sup></h5>
+            </div>
+        </a>
+        <!-- Logo sidebar ends -->
+        <!-- Navigation menu sidebar-->
+        <h6 class="subtitle fs11">Chức năng hệ thống</h6>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="header.html"><i class="material-icons icon">filter_none</i><span>Trang Chủ</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sidebar.html"><i class="material-icons icon">style</i><span>Quản lý sản phẩm đấu giá</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="content.html"><i class="material-icons icon">web</i><span>Quản lý phiên đấu giá</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="content.html"><i class="material-icons icon">web</i><span>Quản lý giao dịch</span></a>
+            </li>
+        </ul>
+        <h6 class="subtitle fs11">Chức năng tra cứu</h6>
+        <ul class="nav flex-column">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="javascript:void(0)"><i class="material-icons icon">search</i><span>Tìm kiếm</span> <i class="material-icons arrow">expand_more</i></a>
+                <div class="nav flex-column">
+                    <div class="nav-item"><a class="nav-link" href="chartjs.html"><span>Tra cứu khách hàng</span></a></div>
+                    <div class="nav-item"><a class="nav-link" href="sparkline.html"><span>Tra cứu giao dịch</span></a></div>
+                </div>
+            </li>
+        </ul>
+        <!-- Navigation menu sidebar ends -->
+        <br>
+        <!-- Setting link -->
+        <ul class="nav flex-column">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="javascript:void(0)"><i class="material-icons icon">settings_applications</i><span>Cấu hình</span> <i class="material-icons arrow">expand_more</i></a>
+                <div class="nav flex-column">
+                    <div class="nav-item"><a class="nav-link" href="profile-setting.html"><span>Thông tin tài khoản</span></a></div>
+                    <div class="nav-item"><a class="nav-link" href="privacy-setting.html"><span>Danh mục hệ thống</span></a></div>
+                    <div class="nav-item"><a class="nav-link" href="privacy-setting.html"><span>Danh sách tài khoản</span></a></div>
+                </div>
+            </li>
+        </ul>
+        <!-- Setting link -->
+    </div>
+    <!-- Sidebar ends -->
+    <!-- wrapper starts -->
+    <div class="wrapper">
+        <div class="content shadow-sm">
+            <div class="container-fluid header-container">
+                <div class="row header">
+                    <div class="container-fluid " id="header-container">
+                        <div class="row">
+                            <!-- Header starts -->
+                            <nav class="navbar col-12 navbar-expand ">
+                                <button class="menu-btn btn btn-link btn-sm" type="button">
+                                    <i class="material-icons">menu</i>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <!-- search starts -->
+                                    <form class="form-inline search mr-auto">
+                                        <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-link btn-sm" type="submit"><i class="material-icons">search</i></button>
+                                    </form>
+                                    <!-- search ends -->
+                                    <!-- icons dropwdowns starts -->
+                                    <ul class="navbar-nav ml-auto">
+                                        <!-- flag dropdown-->
+                                        <li class="nav-item dropdown select-flag">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="flag-icon flag-icon-vi"></span>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown0">
+                                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-vi"></span> <span class="ml-2">Tiếng Việt</span></a>
+                                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-us"></span> <span class="ml-2">Tiếng anh</span></a>
+                                            </div>
+                                        </li>
+
+                                        <!-- applicatio quicklinks dropdown-->
+                                        <li class="nav-item dropdown d-none d-sm-flex">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="material-icons">apps</i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-center no-defaults pt-0 overflow-hidden" aria-labelledby="navbarDropdown2">
+                                                <div class="position-relative text-center rounded">
+                                                    <div class="background">
+                                                        <img src="~/libadmin/assets/img/background-part.png" alt="">
+                                                    </div>
+                                                    <div class="pt-4 pb-5 text-white">
+                                                        <h5 class="font-weight-normal">Quick Access</h5>
+                                                        <p>Get Quick access to your<br>favorite applications</p>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                                <div class="row mx-0 top-60">
+                                                    <div class="col-12 col-md-11 mx-auto">
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <div class="card border-0 shadow mb-3">
+                                                                    <div class="card-body text-center">
+                                                                        <i class="avatar avatar-40 material-icons text-template-primary my-3">favorite</i>
+                                                                        <p>Dashboard</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="card border-0 shadow mb-3">
+                                                                    <div class="card-body text-center">
+                                                                        <i class="avatar avatar-40 material-icons bg-light-warning text-warning my-3">style</i>
+                                                                        <p>Sidebar</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="card border-0 shadow mb-3">
+                                                                    <div class="card-body text-center">
+                                                                        <i class="avatar avatar-40 material-icons bg-light-danger text-danger my-3">library_books</i>
+                                                                        <p>Pages</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="card border-0 shadow mb-3">
+                                                                    <div class="card-body text-center">
+                                                                        <i class="avatar avatar-40 material-icons bg-light-success text-success my-3">poll</i>
+                                                                        <p>Charts</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <!-- message dropdown-->
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="material-icons">email</i>
+                                                <span class="counter bg-danger">1</span>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-sm-left dropdown-menu-center no-defaults pt-0 overflow-hidden" aria-labelledby="navbarDropdown5">
+                                                <div class="position-relative text-center rounded">
+                                                    <div class="background">
+                                                        <img src="~/libadmin/assets/img/background-part.png" alt="">
+                                                    </div>
+                                                    <div class="py-3 text-white">
+                                                        <h5 class="font-weight-normal">Tin nhắn</h5>
+                                                        <p>Cập nhập trạng thái</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="scroll-y h-320 d-block">
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <!-- profile dropdown-->
+                                        <li class="nav-item dropdown ml-0 ml-sm-4">
+                                            <a class="nav-link dropdown-toggle profile-link" href="#" id="navbarDropdown6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <figure class="rounded avatar avatar-30">
+                                                    <img src="~/libadmin/assets/img/user1.png" alt="">
+                                                </figure>
+                                                <div class="username-text ml-2 mr-2 d-none d-lg-inline-block">
+                                                    <h6 class="username"><span>Chào mừng,</span>Trần Minh Quân</h6>
+                                                </div>
+                                                <figure class="rounded avatar avatar-30 d-none d-md-inline-block">
+                                                    <i class="material-icons">expand_more</i>
+                                                </figure>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right w-300 pt-0 overflow-hidden" aria-labelledby="navbarDropdown6">
+                                                <div class="position-relative text-center rounded py-5">
+                                                    <div class="background">
+                                                        <img src="~/libadmin/assets/img/background-part.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="text-center mb-3 top-60 z-2">
+                                                    <figure class="avatar avatar-120 mx-auto shadow"><img src="~/libadmin/assets/img/user1.png" alt=""></figure>
+                                                </div>
+                                                <h5 class="text-center mb-0">Trần Minh Quân</h5>
+                                                <a class="dropdown-item border-top" href="#">
+                                                    <div class="row">
+                                                        <div class="col-auto align-self-center">
+                                                            <i class="material-icons text-success">account_box</i>
+                                                        </div>
+                                                        <div class="col pl-0">
+                                                            <p class="mb-0">Thông tin cá nhân</p>
+                                                            <p class="small text-mute text-trucated">Thông tin cá nhân,tài khoản...</p>
+                                                        </div>
+                                                        <div class="col-auto align-self-center text-right pl-0">
+                                                            <i class="material-icons text-mute small">chevron_right</i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item border-top" href="#">
+                                                    <div class="row">
+                                                        <div class="col-auto align-self-center">
+                                                            <i class="material-icons text-info">account_balance_wallet</i>
+                                                        </div>
+                                                        <div class="col pl-0">
+                                                            <p class="mb-0">Ví cá nhân</p>
+                                                            <p class="small text-mute text-trucated">Ngân hàng,ví dư ...</p>
+                                                        </div>
+                                                        <div class="col-auto align-self-center text-right pl-0">
+                                                            <i class="material-icons text-mute small">chevron_right</i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item border-top" href="#">
+                                                    <div class="row">
+                                                        <div class="col-auto align-self-center">
+                                                            <i class="material-icons text-warning">date_range</i>
+                                                        </div>
+                                                        <div class="col pl-0">
+                                                            <p class="mb-0">Lịch công tác</p>
+                                                            <p class="small text-mute text-trucated">Lịch theo dõi ...</p>
+                                                        </div>
+                                                        <div class="col-auto align-self-center text-right pl-0">
+                                                            <i class="material-icons text-mute small">chevron_right</i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a class="dropdown-item border-top" href="#">
+                                                    <div class="row">
+                                                        <div class="col-auto align-self-center">
+                                                            <i class="material-icons text-danger">exit_to_app</i>
+                                                        </div>
+                                                        <div class="col pl-0">
+                                                            <p class="mb-0 text-danger">Đăng xuất</p>
+                                                        </div>
+                                                        <div class="col-auto align-self-center text-right pl-0">
+                                                            <i class="material-icons text-mute small text-danger">chevron_right</i>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- icons dropwdowns starts -->
+                                </div>
+                            </nav>
+                            <!-- Header ends -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row submenu">
+                    <div class="container-fluid" id="submenu-container">
+                        <div class="row">
+                            <!-- Submenu section starts -->
+                            <nav class="navbar col-12 ">
+                                <ul class="nav nav-pills mr-auto d-none d-sm-flex">
+                                    <li class="nav-item ">
+                                        <a class="nav-link active" href="#">Trang chủ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">@ViewData["LinkWebSite"]</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main container starts -->
+            <div class="container main-container" id="main-container">
+                @RenderBody()
+            </div>
+            <!-- Main container ends -->
+
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md text-center text-md-left align-self-center">
+                        <p>@@Công ty TNHH Công Nghệ Phần Mềm Qsoft</p>
+                    </div>
+                    <div class="col-12 col-md-auto text-center text-md-right">
+                        <ul class="nav justify-content-center justify-md-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Điều khoản sử dụng</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Chính sách bảo mật</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactus.html">Liên hệ với chúng tôi</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- wrapper ends -->
+    <!-- Chat  window and buttons starts -->
+    <div class="wrap-fixed-float wrap-fixed-bottom-left">
+        <button class="btn btn-primary  btn-rounded-circle shadow chat-btn"><i class="material-icons vm">comment</i></button>
+        <div class="chat-window card shadow">
+            <div class="card-header">
+                <h5 class="d-inline-block fs15 mb-0">Quick Chat</h5>
+                <button class="btn btn-sm p-0 float-right chat-close text-white">
+                    <span class="rounded avatar avatar-20">
+                        <i class="material-icons fs15 vm text-mute">close</i>
+                    </span>
+                </button>
+            </div>
+            <div class="card-body chat-list scroll-y p-0 ">
+                <div class="p-3">
+                    <div class="row left-chat">
+                        <div class="col-auto">
+                            <figure class="avatar avatar-20">
+                                <img src="~/libadmin/assets/img/user1.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="col pl-0">
+                            <div class="chat-block">
+                                <div class="row">
+                                    <div class="col">
+                                        How are you? AdminuxPRO we were waitedsince long to be here.
+                                        <p class="text-mute small mt-2">8:00 pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row right-chat">
+                        <div class="col pr-0">
+                            <div class="chat-block">
+                                <div class="row">
+                                    <div class="col">
+                                        How are you? AdminuxPRO we were waited since long to be here.
+                                        <p class="text-mute small mt-2">8:00 pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <figure class="avatar avatar-20">
+                                <img src="~/libadmin/assets/img/user3.png" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row left-chat">
+                        <div class="col-auto">
+                            <figure class="avatar avatar-20">
+                                <img src="~/libadmin/assets/img/user1.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="col pl-0">
+                            <div class="chat-block">
+                                <div class="row">
+                                    <div class="col">
+                                        How are you? AdminuxPRO we were waited since long to be here.
+                                        <p class="text-mute small mt-2">8:00 pm</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row right-chat">
+                        <div class="col pr-0">
+                            <div class="chat-block">
+                                <div class="row">
+                                    <div class="col">
+                                        <p>AdminuxPRO is HTML template can be used in various business domains like Manufacturing, inventory, IT, administration etc. for admin dashbaords </p>
+                                        <p class="text-mute small mt-2">8:00 pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <figure class="avatar avatar-20">
+                                <img src="~/libadmin/assets/img/user3.png" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer px-0">
+                <div class="input-group">
+                    <div class="input-group-prepend ">
+                        <button class="btn btn-link fs15 py-0 " type="button" id="button-addon4"><i class="material-icons vm">attachment</i></button>
+                    </div>
+                    <input type="text" class="form-control form-control-sm rounded" placeholder="Type Message..." aria-label="Message">
+                    <div class="input-group-append ">
+                        <button class="btn btn-link py-0 " type="button" id="button-addon5">
+                            <i class="material-icons fs15 vm">send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/libadmin/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/libadmin/assets/js/popper.min.js"></script>
+    <script src="~/libadmin/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/libadmin/assets/vendor/cookie/jquery.cookie.js"></script>
+    <script src="~/libadmin/assets/vendor/daterangepicker-master/moment.min.js"></script>
+    <script src="~/libadmin/assets/vendor/daterangepicker-master/daterangepicker.js"></script>
+    <script src="~/libadmin/assets/js/main.js"></script>
+    <script src="~/libadmin/assets/js/style-picker.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
